@@ -114,9 +114,11 @@ https://github.com/YamiSR22/UPENN-PROJ1/blob/db2507d6c95d5764bb74e0989ebfdbb6747
 - Which URL do you navigate to in order to check that the ELK server is running?
 http://40.122.113.59:5601/app/kibana#/home
 
+************
+
 _As a **Bonus**, provide the specific commands the user will need to run to download the playbook, update the files, etc._
 
-***************
+https://github.com/YamiSR22/UPENN-PROJ1/blob/de390f236c862e949e9f7e8b3b9289785dc6f7f4/Ansible/metricbeat-config.yml
 
 Create/update a playbook: Nano playbook-name.yml <---name your playbook starting with playbook-[  ].yml
 After running the playbook, edit the config file host to make sure the IP is added in order to run by nanoing into the file.
