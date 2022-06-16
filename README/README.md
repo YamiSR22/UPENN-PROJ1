@@ -120,8 +120,9 @@ _As a **Bonus**, provide the specific commands the user will need to run to down
 
 https://github.com/YamiSR22/UPENN-PROJ1/blob/de390f236c862e949e9f7e8b3b9289785dc6f7f4/Ansible/metricbeat-config.yml
 
-Create/update a playbook: Nano playbook-name.yml <---name your playbook starting with playbook-[  ].yml
-After running the playbook, edit the config file host to make sure the IP is added in order to run by nanoing into the file.
+Create/update a playbook: Nano playbook-name.yml
+
+Before running the playbook, edit the config file host to make sure the IP is added in order to run by nanoing into the file.
 
 To run your playbook: Ansible-playbook playbookname.yml 
 
