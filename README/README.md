@@ -1,4 +1,4 @@
-The files in this repository were used to configure the network depicted below.
+### The files in this repository were used to configure the network depicted below.
 
 Diagramming the Network
 
@@ -38,12 +38,12 @@ Metricbeat records metrics from the Operating system and services running on the
 The configuration details of each machine may be found below.
 _Note: Use the [Markdown Table Generator](http://www.tablesgenerator.com/markdown_tables) to add/remove values from the table_.
 
-| Name     | Function | IP Address | Operating System |
-|----------|----------|------------|------------------|
-| Jump Box | Gateway & runs docker w/ Ansible  | 10.0.0.1   | Linux            |
-| Web-1    | Web Server used to run DVWA         |            |                  |
-| Web-2    | Web Server used to run DVWA         |            |                  |
-| Elk-VM   | Run Elk Container & Cabana         |            |                  |
+| Name     |              Function             | IP Address |     Operating System     |
+|----------|-----------------------------------|------------|--------------------------|
+| Jump Box | Gateway & runs docker w/ Ansible  | 10.2.0.4   | Linux Ubuntu 18.04.5 LTS |
+| Web-1    | Web Server used to run DVWA       | 10.2.0.5   | Linux Ubuntu 18.04.5 LTS |
+| Web-2    | Web Server used to run DVWA       | 10.2.0.6   | Linux Ubuntu 18.04.5 LTS |
+| Elk-VM   | Run Elk Container & Cabana        | 10.0.0.4   | Linux Ubuntu 18.04.5 LTS |
 
 ### Access Policies
 
