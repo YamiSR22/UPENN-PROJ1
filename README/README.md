@@ -107,7 +107,7 @@ _Answer the following questions to fill in the blanks:_
 - Which file do you update to make Ansible run the playbook on a specific machine? Filebeat-config.yml
 - How do I specify which machine to install the ELK server on versus which to install Filebeat on? All private IP addresses that need to be accessed need to be added to the hosts file in order to allow connection. Adding 3 IP addresses to this file: 2 were web servers (10.2.0.5 & 10.2.0.6) and an elk server was added with IP 10.0.0.4. From there, in the playbook file, navigate to "hosts" at the top of the file to specify whether you want the playbook installed on Elk or the Web servers. In addition to this, we also have to specify the host to the ELK server for Filebeat so IP "10.0.0.4" is added to the config file to specify the location for installation.
 
-[Ansible/filebeat-config.yml](https://github.com/YamiSR22/UPENN-PROJ1/blob/f8fe647913674609298058465059a19edba1f615/Ansible/filebeat-config.yml)
+[Ansible/hosts.txt]
 https://github.com/YamiSR22/UPENN-PROJ1/blob/db2507d6c95d5764bb74e0989ebfdbb67470e1db/Ansible/hosts.txt
 
 - Which URL do you navigate to in order to check that the ELK server is running?
