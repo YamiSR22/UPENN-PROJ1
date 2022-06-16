@@ -1,5 +1,3 @@
-## Automated ELK Stack Deployment
-
 The files in this repository were used to configure the network depicted below.
 
 Diagramming the Network
@@ -9,9 +7,11 @@ https://app.diagrams.net/#G1_0WPoQRQB4Zx2jqMtvT748WqDyXb0JzG
 
 These files have been tested and used to generate a live ELK deployment on Azure. They can be used to either recreate the entire deployment pictured above. Alternatively, select portions of the _____ file may be used to install only certain pieces of it, such as Filebeat.
 
-  - _TODO: Enter the playbook file._
+Ansible/filebeat-playbook.yml
+Ansible/metricbeat-playbook.yml
 
 This document contains the following details:
+
 - Description of the Topologu
 - Access Policies
 - ELK Configuration
@@ -24,22 +24,26 @@ This document contains the following details:
 
 The main purpose of this network is to expose a load-balanced and monitored instance of DVWA, the D*mn Vulnerable Web Application.
 
-Load balancing ensures that the application will be highly _____, in addition to restricting _____ to the network.
-- _TODO: What aspect of security do load balancers protect? What is the advantage of a jump box?_
+Load balancing ensures that the application will be highly available, in addition to restricting access to the network.
+- What aspect of security do load balancers protect? What is the advantage of a jump box?
+Load Balancers protect against denial of service attacks (DDoS) because the load balancer analyzes the traffic coming in and determines what server to send the traffic to. This prevents one server from getting overloaded with traffic because the load balancer allows traffic to be distributed evenly among the servers that are connected to it. It is also common for load balancers to have a health probe that periodically checks that a machine is working properly before sending traffic. If it isn't, the load balancer will divert traffic from the malfunctioning server until the issue is resolved. A jump box limits the access that the public has to your virtual network because in order to access the other virtual machines, an individual needs the private IPs of the machines. A jumpbox allows greater control over access to a virtual network and its contents.
 
-Integrating an ELK server allows users to easily monitor the vulnerable VMs for changes to the _____ and system _____.
-- _TODO: What does Filebeat watch for?_
-- _TODO: What does Metricbeat record?_
+Integrating an ELK server allows users to easily monitor the vulnerable VMs for changes to the logs and system traffic.
+- What does Filebeat watch for?
+Filebeat looks for changes in files and when they occurred by looking at log files because Filebeat generates and organizes log files.
+
+- What does Metricbeat record?
+Metricbeat records metrics from the Operating system and services running on the server. By using Elasticsearch or Logstash, you can visualize the metrics and statistics that Metricbeat generates from the OS and running services.
 
 The configuration details of each machine may be found below.
 _Note: Use the [Markdown Table Generator](http://www.tablesgenerator.com/markdown_tables) to add/remove values from the table_.
 
 | Name     | Function | IP Address | Operating System |
 |----------|----------|------------|------------------|
-| Jump Box | Gateway  | 10.0.0.1   | Linux            |
-| TODO     |          |            |                  |
-| TODO     |          |            |                  |
-| TODO     |          |            |                  |
+| Jump Box | Gateway & runs docker w/ Ansible  | 10.0.0.1   | Linux            |
+| Web-1    | Web Server used to run DVWA         |            |                  |
+| Web-2    | Web Server used to run DVWA         |            |                  |
+| Elk-VM   | Run Elk Container & Cabana         |            |                  |
 
 ### Access Policies
 
