@@ -49,23 +49,26 @@ _Note: Use the [Markdown Table Generator](http://www.tablesgenerator.com/markdow
 
 The machines on the internal network are not exposed to the public Internet. 
 
-Only the _____ machine can accept connections from the Internet. Access to this machine is only allowed from the following IP addresses:
-- _TODO: Add whitelisted IP addresses_
+Only the Jump-Box-Provisioner machine can accept connections from the Internet. Access to this machine is only allowed from the following IP addresses: 157.245.13.235 (my public IP)
 
-Machines within the network can only be accessed by _____.
-- _TODO: Which machine did you allow to access your ELK VM? What was its IP address?_
+Machines within the network can only be accessed by Jump-Box-Provisioner VM.
+- Which machine did you allow to access your ELK VM? Jump-Box-Provisioner VM
+- What was its IP address? 52.180.146.2
 
 A summary of the access policies in place can be found in the table below.
 
-| Name     | Publicly Accessible | Allowed IP Addresses |
-|----------|---------------------|----------------------|
-| Jump Box | Yes/No              | 10.0.0.1 10.0.0.2    |
-|          |                     |                      |
-|          |                     |                      |
+|     Name      | Publicly Accessible | Allowed IP Addresses |
+|---------------|---------------------|----------------------|
+| Jump Box      | Yes/No              |     52.180.146.2     |
+| Web-1         | No                  |       10.2.0.4       |
+| Web-2         | No                  |       10.2.0.4       |
+| Elk           | Yes (via Port 5601) |     52.180.146.2     |
+| Load Balancer | Yes (via Port 80)   |     52.180.146.2     |
 
 ### Elk Configuration
 
-Ansible was used to automate configuration of the ELK machine. No configuration was performed manually, which is advantageous because...
+Ansible was used to automate configuration of the ELK machine. No configuration was performed manually, which is advantageous because it prevented having to configure ELK manually resulting in a more streamlined process. It also allowed more control over what was being installed and/or performed on the machine.
+
 - _TODO: What is the main advantage of automating configuration with Ansible?_
 
 The playbook implements the following tasks:
