@@ -70,11 +70,11 @@ A summary of the access policies in place can be found in the table below.
 Ansible was used to automate configuration of the ELK machine. No special coding skills are necessary to use Ansible's playbooks. Therefore, there were no configurations performed manually, which is advantageous because it prevented having to configure ELK manually resulting in a more streamlined process. It also allowed more control over what was being installed and/or performed on the machine.
 
 The playbook implements the following tasks:
-- _The first task of the elk playbook installs docker.io on the Elk virtual machine
-- _Python is then installed on the Elk VM
-- _Elk requires more virtual memory so this task increases the memory to 262144
-- _Downloads, installs and executes the docker elk container on the Elk vm on restart so the elk container doesn't need to be manually started
-- _This enables docker on boot so you don't have to manually start docker when you turn your VM back on.
+- The first task of the elk playbook installs docker.io on the Elk virtual machine
+- Python is then installed on the Elk VM
+- Elk requires more virtual memory so this task increases the memory to 262144
+- Downloads, installs and executes the docker elk container on the Elk vm on restart so the elk container doesn't need to be manually started
+- This enables docker on boot so you don't have to manually start docker when you turn your VM back on.
 
 The following screenshot displays the result of running `docker ps` after successfully configuring the ELK instance.
 
