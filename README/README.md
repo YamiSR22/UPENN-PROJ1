@@ -53,7 +53,7 @@ Only the Jump-Box-Provisioner machine can accept connections from the Internet. 
 
 Machines within the network can only be accessed by Jump-Box-Provisioner VM.
 - Which machine did you allow to access your ELK VM? Jump-Box-Provisioner VM
-- What was its IP address? 52.180.146.2
+- What was its IP address? 40.122.113.59
 
 A summary of the access policies in place can be found in the table below.
 
@@ -102,9 +102,23 @@ SSH into the control node and follow the steps below:
 <img width="475" alt="Module-statusForElk" src="https://user-images.githubusercontent.com/100730516/174191842-cf9050af-0238-4d06-8223-87bb97460d86.png">
 
 _Answer the following questions to fill in the blanks:_
-- _Which file is the playbook? Filebeat-playbook.yml 
-- _Where do you copy it?
-- _Which file do you update to make Ansible run the playbook on a specific machine? How do I specify which machine to install the ELK server on versus which to install Filebeat on?_
-- _Which URL do you navigate to in order to check that the ELK server is running?
+- Which file is the playbook? Filebeat-playbook.yml 
+- Where do you copy it? /etc/ansible/filebeat.playbook.yml
+- Which file do you update to make Ansible run the playbook on a specific machine? Filebeat-config.yml
+- How do I specify which machine to install the ELK server on versus which to install Filebeat on? All private IP addresses that need to be accessed need to be added to the hosts file in order to allow connection. Adding 3 IP addresses to this file: 2 were web servers (10.2.0.5 & 10.2.0.6) and an elk server was added with IP 10.0.0.4. From there, in the playbook file, navigate to "hosts" at the top of the file to specify whether you want the playbook installed on Elk or the Web servers. In addition to this, we also have to specify the host to the ELK server for Filebeat so IP "10.0.0.4" is added to the config file to specify the location for installation.
+
+Ansible/filebeat-config.yml
+
+- Which URL do you navigate to in order to check that the ELK server is running?
+http://40.122.113.59:5601/app/kibana#/home
 
 _As a **Bonus**, provide the specific commands the user will need to run to download the playbook, update the files, etc._
+
+Ansible/metricbeat-playbook.yml
+
+Create/update a playbook: Nano playbook-name.yml <---name your playbook starting with playbook-[  ].yml
+After running the playbook, edit the config file host to make sure the IP is added in order to run by nanoing into the file.
+
+To run your playbook: Ansible-playbook playbookname.yml 
+
+
