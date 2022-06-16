@@ -101,7 +101,7 @@ SSH into the control node and follow the steps below:
 <img width="468" alt="CommandForAnsible-PLAYBOOK" src="https://user-images.githubusercontent.com/100730516/174191870-7650dfed-8132-4934-aad6-c63b644aa63d.png">
 <img width="475" alt="Module-statusForElk" src="https://user-images.githubusercontent.com/100730516/174191842-cf9050af-0238-4d06-8223-87bb97460d86.png">
 
-_TODO: Answer the following questions to fill in the blanks:_
+_Answer the following questions to fill in the blanks:_
 - _Which file is the playbook? Filebeat-playbook.yml 
 - _Where do you copy it?
 - _Which file do you update to make Ansible run the playbook on a specific machine? How do I specify which machine to install the ELK server on versus which to install Filebeat on?_
